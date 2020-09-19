@@ -26,7 +26,7 @@ public class Endereco {
 		return rua;
 	}
 
-	protected void setRua(String rua) {
+	public void setRua(String rua) {
 		this.rua = rua;
 	}
 
@@ -34,7 +34,7 @@ public class Endereco {
 		return bairo;
 	}
 
-	protected void setBairo(String bairo) {
+	public void setBairo(String bairo) {
 		this.bairo = bairo;
 	}
 
@@ -42,7 +42,7 @@ public class Endereco {
 		return cep;
 	}
 
-	protected void setCep(String cep) {
+	public void setCep(String cep) {
 		this.cep = cep;
 	}
 
@@ -50,7 +50,7 @@ public class Endereco {
 		return numero;
 	}
 
-	protected void setNumero(String numero) {
+	public void setNumero(String numero) {
 		this.numero = numero;
 	}
 
@@ -58,7 +58,7 @@ public class Endereco {
 		return (complemento == null) ? "" : complemento;
 	}
 
-	protected void setComplemento(String complemento) {
+	public void setComplemento(String complemento) {
 		this.complemento = complemento;
 	}
 }

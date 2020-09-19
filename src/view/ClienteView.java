@@ -15,8 +15,8 @@ public class ClienteView {
 		System.out.println("    Email:" + cpf);
 		System.out.println("    Data Nascimento:" + cpf);
 		System.out.println("    Telefones: ");
-		telefones.forEach(telefone 
-				-> System.out.println("        (" + telefone.getDdd() + ") " +telefone.getTelefone()));
+		telefones.forEach(telefone -> 
+			System.out.println("        (" + telefone.getDdd() + ") " +telefone.getTelefone()));
 		System.out.println("    Endereço:");
 		System.out.println("        Rua:" + endereco.getRua());
 		System.out.println("        Número:" + endereco.getNumero());

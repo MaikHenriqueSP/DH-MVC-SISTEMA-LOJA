@@ -68,5 +68,10 @@ public class ClienteController {
 	public List<Telefone> getTelefones() {
 		return clienteModel.getTelefones();
 	}
+	
+	public void updateClienteView() {
+		clienteView.printClientDetails(clienteModel.getNome(),clienteModel.getCpf(), clienteModel.getEmail(),
+				clienteModel.getDataNascimento(), clienteModel.getEndereco(), clienteModel.getTelefones());
+	}
 
 }
