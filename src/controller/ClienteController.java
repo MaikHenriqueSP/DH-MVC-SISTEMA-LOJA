@@ -7,71 +7,79 @@ import model.Cliente;
 import model.Endereco;
 import model.Telefone;
 import view.ClienteView;
+import view.EnderecoView;
 
 public class ClienteController {
 	private Cliente clienteModel;
 	private ClienteView clienteView;
+	private EnderecoView enderecoView;
 	
-	public ClienteController(Cliente clienteModel, ClienteView clienteView) {
+	public ClienteController(Cliente clienteModel, ClienteView clienteView, EnderecoView enderecoView) {
 		this.clienteModel = clienteModel;
 		this.clienteView = clienteView;
+		this.enderecoView = enderecoView;
 	}	
 	
 	public void adicionarTelefone(Telefone telefone) {
-		clienteModel.adicionarTelefone(telefone);		
+		this.clienteModel.adicionarTelefone(telefone);		
 	}
 	
 	public void removerTelefone(Telefone telefone) {
-		clienteModel.removerTelefone(telefone);
+		this.clienteModel.removerTelefone(telefone);
 	}
 
 	public String getNome() {
-		return clienteModel.getNome();
+		return this.clienteModel.getNome();
 	}
 
 	protected void setNome(String nome) {
-		clienteModel.setNome(nome);
+		this.clienteModel.setNome(nome);
 	}
 
 	public String getCpf() {
-		return clienteModel.getCpf();
+		return this.clienteModel.getCpf();
 	}
 
 	protected void setCpf(String cpf) {
-		clienteModel.setCpf(cpf);
+		this.clienteModel.setCpf(cpf);
 	}
 
 	public String getEmail() {
-		return clienteModel.getEmail();
+		return this.clienteModel.getEmail();
 	}
 
 	protected void setEmail(String email) {
-		clienteModel.setEmail(email);
+		this.clienteModel.setEmail(email);
 	}
 
 	public LocalDate getDataNascimento() {
-		return clienteModel.getDataNascimento();
+		return this.clienteModel.getDataNascimento();
 	}
 
 	protected void setDataNascimento(LocalDate dataNascimento) {
-		clienteModel.setDataNascimento(dataNascimento);
+		this.clienteModel.setDataNascimento(dataNascimento);
 	}
 
 	public Endereco getEndereco() {
-		return clienteModel.getEndereco();
+		return this.clienteModel.getEndereco();
 	}
 
 	protected void setEndereco(Endereco endereco) {
-		clienteModel.setEndereco(endereco);
+		this.clienteModel.setEndereco(endereco);
 	}
 
 	public List<Telefone> getTelefones() {
-		return clienteModel.getTelefones();
+		return this.clienteModel.getTelefones();
 	}
 	
 	public void updateClienteView() {
-		clienteView.printClientDetails(clienteModel.getNome(),clienteModel.getCpf(), clienteModel.getEmail(),
-				clienteModel.getDataNascimento(), clienteModel.getEndereco(), clienteModel.getTelefones());
+		clienteView.printClienteDetails(clienteModel.getNome(),clienteModel.getCpf(), clienteModel.getEmail(),
+				clienteModel.getDataNascimento());
+		this.updateClienteEnderecoView();
+	}
+	
+	public void updateClienteEnderecoView() {
+		enderecoView.printEndereco(clienteModel.getEndereco());
 	}
 
 }
