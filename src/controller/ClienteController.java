@@ -8,16 +8,19 @@ import model.Endereco;
 import model.Telefone;
 import view.ClienteView;
 import view.EnderecoView;
+import view.TelefoneView;
 
 public class ClienteController {
 	private Cliente clienteModel;
 	private ClienteView clienteView;
 	private EnderecoView enderecoView;
+	private TelefoneView telefoneView;
 	
-	public ClienteController(Cliente clienteModel, ClienteView clienteView, EnderecoView enderecoView) {
+	public ClienteController(Cliente clienteModel, ClienteView clienteView, EnderecoView enderecoView, TelefoneView telefoneView) {
 		this.clienteModel = clienteModel;
 		this.clienteView = clienteView;
 		this.enderecoView = enderecoView;
+		this.telefoneView = telefoneView;
 	}	
 	
 	public void adicionarTelefone(Telefone telefone) {
@@ -71,15 +74,24 @@ public class ClienteController {
 	public List<Telefone> getTelefones() {
 		return this.clienteModel.getTelefones();
 	}
-	
-	public void updateClienteView() {
-		clienteView.printClienteDetails(clienteModel.getNome(),clienteModel.getCpf(), clienteModel.getEmail(),
-				clienteModel.getDataNascimento());
-		this.updateClienteEnderecoView();
+		
+	public void updateView() {
+		this.updateClienteView();
+		this.updateEnderecoView();
+		this.updateTelefoneView();
 	}
 	
-	public void updateClienteEnderecoView() {
-		enderecoView.printEndereco(clienteModel.getEndereco());
+	public void updateClienteView() {
+		clienteView.printClienteDetails(this.getNome(),this.getCpf(), this.getEmail(),
+				this.getDataNascimento());
+	}
+	
+	public void updateEnderecoView() {
+		enderecoView.printEndereco(this.getEndereco());
+	}
+	
+	public void updateTelefoneView() {
+		telefoneView.printTelefone(this.getTelefones());
 	}
 
 }

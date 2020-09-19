@@ -1,10 +1,6 @@
 package view;
 
 import java.time.LocalDate;
-import java.util.List;
-
-import model.Endereco;
-import model.Telefone;
 
 public class ClienteView {
 

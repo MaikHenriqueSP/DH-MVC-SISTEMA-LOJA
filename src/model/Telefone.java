@@ -13,7 +13,7 @@ public class Telefone {
 		return telefone;
 	}
 	
-	protected void setTelefone(String telefone) {
+	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
 	
@@ -21,7 +21,7 @@ public class Telefone {
 		return ddd;
 	}
 	
-	protected void setDdd(String ddd) {
+	public void setDdd(String ddd) {
 		this.ddd = ddd;
 	}
 }
