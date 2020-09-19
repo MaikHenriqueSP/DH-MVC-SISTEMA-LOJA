@@ -17,7 +17,7 @@ public class Produto {
 		return nome;
 	}
 	
-	protected void setNome(String nome) {
+	public void setNome(String nome) {
 		this.nome = nome;
 	}
 	
@@ -25,7 +25,7 @@ public class Produto {
 		return preco;
 	}
 	
-	protected void setPreco(float preco) {
+	public void setPreco(float preco) {
 		this.preco = preco;
 	}
 	
@@ -33,7 +33,7 @@ public class Produto {
 		return quantidadeEstoque;
 	}
 	
-	protected void setQuantidadeEstoque(int quantidadeEstoque) {
+	public void setQuantidadeEstoque(int quantidadeEstoque) {
 		this.quantidadeEstoque = quantidadeEstoque;
 	}
 	
@@ -41,7 +41,7 @@ public class Produto {
 		return descricao;
 	}
 	
-	protected void setDescricao(String descricao) {
+	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
 }
