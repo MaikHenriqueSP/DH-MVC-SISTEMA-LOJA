@@ -10,5 +10,5 @@ public class ClienteView {
 		System.out.println("    Email:" + cpf);
 		System.out.println("    Data Nascimento:" + cpf);
 		System.out.println("    Telefones: ");
-	};
+	}
 }

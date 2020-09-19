@@ -14,7 +14,6 @@ public class Pedido {
 	
 	
 	public Pedido(Cliente cliente, String notaFiscal, LocalDate dataSolicitacao, float valorTotal, String status) {
-		super();
 		this.cliente = cliente;
 		this.notaFiscal = notaFiscal;
 		this.dataSolicitacao = dataSolicitacao;
@@ -35,11 +34,11 @@ public class Pedido {
 		this.cliente = cliente;
 	}
 	
-	public List<Produto> getProduto() {
+	public List<Produto> getProdutos() {
 		return List.copyOf(this.produtos);
 	}
 	
-	protected void setProduto(List<Produto> produto) {
+	protected void setProdutos(List<Produto> produto) {
 		this.produtos = produto;
 	}
 	

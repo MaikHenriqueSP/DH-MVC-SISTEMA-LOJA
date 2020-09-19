@@ -16,7 +16,8 @@ public class ClienteController {
 	private EnderecoView enderecoView;
 	private TelefoneView telefoneView;
 	
-	public ClienteController(Cliente clienteModel, ClienteView clienteView, EnderecoView enderecoView, TelefoneView telefoneView) {
+	public ClienteController(Cliente clienteModel, ClienteView clienteView, EnderecoView enderecoView, 
+			TelefoneView telefoneView) {
 		this.clienteModel = clienteModel;
 		this.clienteView = clienteView;
 		this.enderecoView = enderecoView;

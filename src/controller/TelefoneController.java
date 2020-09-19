@@ -31,6 +31,4 @@ public class TelefoneController {
 	public void updateTelefoneView() {
 		this.telefoneView.printTelefone(this.getDdd(), this.getTelefone());
 	}
-
-
 }
