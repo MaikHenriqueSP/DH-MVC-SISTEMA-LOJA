@@ -25,74 +25,73 @@ public class ClienteController {
 	}	
 	
 	public void adicionarTelefone(Telefone telefone) {
-		this.clienteModel.adicionarTelefone(telefone);		
+		clienteModel.adicionarTelefone(telefone);		
 	}
 	
 	public void removerTelefone(Telefone telefone) {
-		this.clienteModel.removerTelefone(telefone);
+		clienteModel.removerTelefone(telefone);
 	}
 
 	public String getNome() {
-		return this.clienteModel.getNome();
+		return clienteModel.getNome();
 	}
 
 	protected void setNome(String nome) {
-		this.clienteModel.setNome(nome);
+		clienteModel.setNome(nome);
 	}
 
 	public String getCpf() {
-		return this.clienteModel.getCpf();
+		return clienteModel.getCpf();
 	}
 
 	protected void setCpf(String cpf) {
-		this.clienteModel.setCpf(cpf);
+		clienteModel.setCpf(cpf);
 	}
 
 	public String getEmail() {
-		return this.clienteModel.getEmail();
+		return clienteModel.getEmail();
 	}
 
 	protected void setEmail(String email) {
-		this.clienteModel.setEmail(email);
+		clienteModel.setEmail(email);
 	}
 
 	public LocalDate getDataNascimento() {
-		return this.clienteModel.getDataNascimento();
+		return clienteModel.getDataNascimento();
 	}
 
 	protected void setDataNascimento(LocalDate dataNascimento) {
-		this.clienteModel.setDataNascimento(dataNascimento);
+		clienteModel.setDataNascimento(dataNascimento);
 	}
 
 	public Endereco getEndereco() {
-		return this.clienteModel.getEndereco();
+		return clienteModel.getEndereco();
 	}
 
 	protected void setEndereco(Endereco endereco) {
-		this.clienteModel.setEndereco(endereco);
+		clienteModel.setEndereco(endereco);
 	}
 
 	public List<Telefone> getTelefones() {
-		return this.clienteModel.getTelefones();
+		return clienteModel.getTelefones();
 	}
 		
 	public void updateView() {
-		this.updateClienteView();
-		this.updateEnderecoView();
-		this.updateTelefoneView();
+		updateClienteView();
+		updateEnderecoView();
+		updateTelefoneView();
 	}
 	
 	public void updateClienteView() {
-		clienteView.printClienteDetails(this.getNome(),this.getCpf(), this.getEmail(),
-				this.getDataNascimento());
+		clienteView.printClienteDetails(getNome(),getCpf(), getEmail(),	getDataNascimento());
 	}
 	
 	public void updateEnderecoView() {
-		enderecoView.printEndereco(this.getEndereco());
+		enderecoView.printEndereco(getEndereco());
 	}
 	
 	public void updateTelefoneView() {
-		telefoneView.printTelefone(this.getTelefones());
+		telefoneView.printTelefone(getTelefones());
 	}
 
 }

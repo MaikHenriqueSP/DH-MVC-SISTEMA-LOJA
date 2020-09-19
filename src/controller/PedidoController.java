@@ -25,67 +25,66 @@ public class PedidoController {
 	}
 	
 	public void adicionarProduto(Produto produto) {
-		this.pedidoModel.adicionarProduto(produto);	
+		pedidoModel.adicionarProduto(produto);	
 	}
 	
 	public Cliente getCliente() {
-		return this.pedidoModel.getCliente();
+		return pedidoModel.getCliente();
 	}
 	
 	public void setCliente(Cliente cliente) {
-		this.pedidoModel.setCliente(cliente);
+		pedidoModel.setCliente(cliente);
 	}
 	
 	public List<Produto> getProduto() {
-		return this.pedidoModel.getProdutos();
+		return pedidoModel.getProdutos();
 	}
 	
 	public String getNotaFiscal() {
-		return this.pedidoModel.getNotaFiscal();
+		return pedidoModel.getNotaFiscal();
 	}
 	
 	public void setNotaFiscal(String notaFiscal) {
-		this.pedidoModel.setNotaFiscal(notaFiscal);
+		pedidoModel.setNotaFiscal(notaFiscal);
 	}
 	
 	public LocalDate getDataSolicitacao() {
-		return this.pedidoModel.getDataSolicitacao();
+		return pedidoModel.getDataSolicitacao();
 	}
 	
 	public void setDataSolicitacao(LocalDate dataSolicitacao) {
-		this.pedidoModel.setDataSolicitacao(dataSolicitacao);
+		pedidoModel.setDataSolicitacao(dataSolicitacao);
 	}
 	
 	public float getValorTotal() {
-		return this.pedidoModel.getValorTotal();
+		return pedidoModel.getValorTotal();
 	}
 	
 	public void setValorTotal(float valorTotal) {
-		this.pedidoModel.setValorTotal(valorTotal);
+		pedidoModel.setValorTotal(valorTotal);
 	}
 	
 	public String getStatus() {
-		return this.pedidoModel.getStatus();
+		return pedidoModel.getStatus();
 	}
 	
 	public void setStatus(String status) {
-		this.pedidoModel.setStatus(status);
+		pedidoModel.setStatus(status);
 	}
 	
 	public void updateView() {
-		this.pedidoView.printPredido(this.getNotaFiscal(), this.getDataSolicitacao(), this.getValorTotal(),
-				this.getStatus());
-		this.updateProdutoView();
-		this.updateClienteView();
+		pedidoView.printPedido(getNotaFiscal(), getDataSolicitacao(), getValorTotal(), getStatus());
+		updateProdutoView();
+		updateClienteView();
 	}
 
 	public void updateProdutoView() {
-		this.produtoView.printProduto(this.pedidoModel.getProdutos());
+		produtoView.printProduto(pedidoModel.getProdutos());
 	}
 	
 	public void updateClienteView() {
-		Cliente cliente = this.getCliente();
-		this.clienteView.printClienteDetails(cliente.getNome(), cliente.getCpf(), cliente.getEmail(),
+		Cliente cliente = getCliente();
+		clienteView.printClienteDetails(cliente.getNome(), cliente.getCpf(), cliente.getEmail(),
 				cliente.getDataNascimento());
 	} 
 }

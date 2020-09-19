@@ -13,39 +13,39 @@ public class ProdutoController {
 	}
 	
 	public String getNome() {
-		return this.produtoModel.getNome();
+		return produtoModel.getNome();
 	}
 	
 	public void setNome(String nome) {
-		this.produtoModel.setNome(nome);
+		produtoModel.setNome(nome);
 	}
 	
 	public float getPreco() {
-		return this.produtoModel.getPreco();
+		return produtoModel.getPreco();
 	}
 	
 	public void setPreco(float preco) {
-		this.setPreco(preco);
+		produtoModel.setPreco(preco);
 	}
 	
 	public int getQuantidadeEstoque() {
-		return this.produtoModel.getQuantidadeEstoque();
+		return produtoModel.getQuantidadeEstoque();
 	}
 	
 	public void setQuantidadeEstoque(int quantidadeEstoque) {
-		this.produtoModel.setQuantidadeEstoque(quantidadeEstoque);
+		produtoModel.setQuantidadeEstoque(quantidadeEstoque);
 	}
 	
 	public String getDescricao() {
-		return this.produtoModel.getDescricao();
+		return produtoModel.getDescricao();
 	}
 	
 	public void setDescricao(String descricao) {
-		this.produtoModel.setDescricao(descricao);
+		produtoModel.setDescricao(descricao);
 	}	
 	
 	public void updateView() {
-		this.produtoView.printProduto(this.produtoModel.getNome(), this.produtoModel.getPreco(),
-				this.produtoModel.getQuantidadeEstoque(), this.produtoModel.getDescricao());
+		produtoView.printProduto(produtoModel.getNome(), produtoModel.getPreco(),
+				produtoModel.getQuantidadeEstoque(), produtoModel.getDescricao());
 	}
 }

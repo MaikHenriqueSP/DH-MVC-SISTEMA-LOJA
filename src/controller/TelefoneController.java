@@ -13,22 +13,22 @@ public class TelefoneController {
 	}
 	
 	public String getTelefone() {
-		return this.telefoneModel.getTelefone();
+		return telefoneModel.getTelefone();
 	}
 	
 	public void setTelefone(String telefone) {
-		this.telefoneModel.setTelefone(telefone);
+		telefoneModel.setTelefone(telefone);
 	}
 	
 	public String getDdd() {
-		return this.telefoneModel.getDdd();
+		return telefoneModel.getDdd();
 	}
 	
 	public void setDdd(String ddd) {
-		this.telefoneModel.setDdd(ddd);
+		telefoneModel.setDdd(ddd);
 	}
 	
 	public void updateTelefoneView() {
-		this.telefoneView.printTelefone(this.getDdd(), this.getTelefone());
+		telefoneView.printTelefone(getDdd(), getTelefone());
 	}
 }

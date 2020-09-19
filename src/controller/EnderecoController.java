@@ -53,7 +53,6 @@ public class EnderecoController {
 	}
 	
 	public void updateClienteView() {
-		enderecoView.printEndereco(this.getRua(), this.getBairo(), 
-				this.getCep(), this.getNumero(), this.getComplemento());
+		enderecoView.printEndereco(getRua(), getBairo(), getCep(), getNumero(), getComplemento());
 	}
 }
