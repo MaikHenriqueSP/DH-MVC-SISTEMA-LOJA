@@ -24,10 +24,16 @@ public class Cliente {
 	}
 	
 	public void adicionarTelefone(Telefone telefone) {
+		if (telefone == null || telefones.contains(telefone)) {
+			return;
+		}
 		this.telefones.add(telefone);		
 	}
 	
 	public void removerTelefone(Telefone telefone) {
+		if (telefone == null) {
+			return;
+		}
 		telefones.remove(telefone);
 	}
 

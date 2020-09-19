@@ -13,17 +13,35 @@ public class Pedido {
 	private String status;
 	
 	
-	public Pedido(Cliente cliente, String notaFiscal, LocalDate dataSolicitacao, float valorTotal, String status) {
+	public Pedido(Cliente cliente, String notaFiscal, LocalDate dataSolicitacao, String status, 
+			List<Produto> produtos) {
 		this.cliente = cliente;
 		this.notaFiscal = notaFiscal;
 		this.dataSolicitacao = dataSolicitacao;
-		this.valorTotal = valorTotal;
+		this.valorTotal = 0;
 		this.status = status;
-		this.produtos = new LinkedList<>();
+		this.produtos = new LinkedList<>(produtos);
+		calcularValorTotal();
+	}
+	
+	private void calcularValorTotal() {
+		this.valorTotal = produtos.stream().map(Produto::getPreco)
+				.reduce(0.0f, (acumulador, preco) -> acumulador + preco);
 	}
 	
 	public void adicionarProduto(Produto produto) {
+		if (produto == null || produtos.contains(produto)) {
+			return;
+		}
 		this.produtos.add(produto);		
+		this.valorTotal += produto.getPreco();
+	}
+	
+	public void removerProduto(Produto produto) {
+		if (produto == null) {
+			return;
+		}
+		this.produtos.remove(produto);
 	}
 	
 	public Cliente getCliente() {

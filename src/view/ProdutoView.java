@@ -17,8 +17,11 @@ public class ProdutoView {
 	}
 	
 	public void printProduto(List<Produto> produtos) {
+		System.out.println("/////////////////////////////////////////////////////////////////");
+		System.out.println("Lista de produtos");
 		produtos.forEach(produto -> printProduto(produto.getNome(), produto.getPreco(), 
 				produto.getQuantidadeEstoque(), produto.getDescricao()));
+		System.out.println("/////////////////////////////////////////////////////////////////");
 	}
 
 }
