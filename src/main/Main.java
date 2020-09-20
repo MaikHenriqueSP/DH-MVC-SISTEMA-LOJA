@@ -42,8 +42,8 @@ public class Main {
 				new Endereco("Rua Melamel", "Não sei", "103101301", "2131"), new Telefone("08", "12345678"));
 		
 		//Produtos
-		Produto produto1 = new Produto("Air max", 231.2f, 30, "Tênis Feio");
-		Produto produto2 = new Produto("Veloster", 313993.f, 99, "Carroça de luxo");
+		Produto produto1 = new Produto("Air max", 231.2f, 30, "Ar máximo");
+		Produto produto2 = new Produto("Veloster", 313993.f, 99, "Carro de três portas");
 		Produto produto3 = new Produto("Algum Produto", 132.f, 10, "Muito bom");
 		
 		//Pedidos
@@ -90,7 +90,8 @@ public class Main {
 		
 //		lojaController.updateLojaView();
 //		lojaController.updatePedidosView();
-		lojaController.updateClientesView();
+//		lojaController.updateClientesView();
+		lojaController.updateView();
 			
 	}
 }
